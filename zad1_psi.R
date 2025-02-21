@@ -284,10 +284,37 @@ tworz(10)
 
 # 3. Stwórz funkcję o nazwie pole_kola, która oblicza pole powierzchni koła dla danego promienia.
 
+pole_kola = function(r){
+  return(3.1415*r*r)
+}
+pole_kola(6)
+
 # 4. Stwórz funkcję, która oblicza długość przeciwprostokątnej w trójkącie prostokątnym.
+
+przeciw = function(b1,b2){
+  return(sqrt(b1*b1+b2*b2))
+}
+przeciw(3,4)
 
 # 5. Stwórz funkcję będącą najprostszą wersją kalkulatora 
 # (dodawanie, odejmowanie, mnożenie albo dzielenie dwóch liczb).
+
+kalk = function(liczba1,znak,liczba2){
+  if(znak == "+") {
+    print(liczba1+liczba2)
+  }
+  else if(znak == "-"){
+    print(liczba1-liczba2)
+  }
+  else if(znak == "*"){
+    print(liczba1*liczba2)
+  }
+  else if(znak == "/"){
+    print(liczba1/liczba2)
+  }
+}
+
+kalk(3,"/",4)
 
 # 6. Stwórz funkcję o nazwie przyznaj_nagrode()
 # która symuluje rzut sześcienną kostką do gry i przyznaje nagrodę w zależności od wyniku rzutu. 
@@ -296,6 +323,22 @@ tworz(10)
 # - Jeśli wyrzucona liczba oczek to 4 lub 5, funkcja powinna zwrócić komunikat: "Nagroda standardowa"
 # - Jeśli wyrzucona liczba oczek to 1, 2 lub 3, funkcja powinna zwrócić komunikat: "Brak nagrody..."
 
+przyznaj_nagrode = function(){
+  x = sample(1:6,1)
+  if(x == 6){
+    print("Super bonus")
+  }
+  else if(x == 5 || x == 4) {
+    print("Nagroda standardowa")
+  }
+  else{
+    print("Brak nagrody")
+  }
+}
+przyznaj_nagrode()
+
+
+
 # 7. Stwórz funkcję obliczającą podatek w zależności od dochodu. 
 # Przyjmij następujące założenia:
 # a) Jeżeli podatnik rozlicza się liniowo, wtedy niezależnie od kwoty płaci 19% podatku.
@@ -303,9 +346,22 @@ tworz(10)
 # - poniżej kwoty 85528zł płaci 18% podatku minus kwota zmniejszająca, czyli 556zł;
 # - powyżej kwoty 85528zł płaci 14839zł + 32% nadwyżki powyżej 85528zł.
 
-
-
-
-
-
-
+podatek = function(kwota,typ){
+  if(typ == "liniowy"){
+    return(kwota*0.19)
+  }
+  else{
+    if(kwota<85528){
+      podatek = kwota*0.18-556
+      if(podatek < 0){
+        podatek = 0
+      }
+      return (podatek);
+    }
+    else{
+      return((kwota-85528)*0.32+14839)
+    }
+  }
+}
+podatek(3,"linioy")
+podatek(234234124,"og")
