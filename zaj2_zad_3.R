@@ -1,6 +1,6 @@
 
 # Tworzenie chmury słów za pomocą pakietu wordcloud
-#install.packages("wordcloud")
+install.packages("wordcloud")
 library(wordcloud)
 
 #install.packages("qdap")
