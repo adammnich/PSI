@@ -3,7 +3,7 @@
 install.packages("wordcloud")
 library(wordcloud)
 
-#install.packages("qdap")
+install.packages("qdap")
 library(qdap)
 
 # Wczytaj dane tekstowe
