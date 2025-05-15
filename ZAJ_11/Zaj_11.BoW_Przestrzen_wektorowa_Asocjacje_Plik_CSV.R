@@ -217,8 +217,8 @@ findAssocs(tdm,"service",0.5)
 findAssocs(tdm,"experience",0.5)
 findAssocs(tdm,"passengers",0.5)
 findAssocs(tdm,"staff",0.5)
-findAssocs(tdm,"crews",0.5)
-findAssocs(tdm,"prices",0.5)
+findAssocs(tdm,"seats",0.5)
+findAssocs(tdm,"boarding",0.5)
 
 
 
